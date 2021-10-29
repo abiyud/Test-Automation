@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>TC_Update user</name>
+   <tag></tag>
+   <comment></comment>
+   <testCaseGuid>0c46aaa5-790d-43d4-a01e-0dff69c8e20b</testCaseGuid>
+   <variable>
+      <defaultValue>'morpheus'</defaultValue>
+      <description></description>
+      <id>db9349fe-1d3b-4be2-858e-1eb23bb9ebcf</id>
+      <masked>false</masked>
+      <name>name</name>
+   </variable>
+   <variable>
+      <defaultValue>'zion resident'</defaultValue>
+      <description></description>
+      <id>4f16cdb8-a82a-40cc-b79b-efdf994134d0</id>
+      <masked>false</masked>
+      <name>job</name>
+   </variable>
+   <variable>
+      <defaultValue>3</defaultValue>
+      <description></description>
+      <id>66bdf730-b319-4d17-8b97-284344641c9a</id>
+      <masked>false</masked>
+      <name>userId</name>
+   </variable>
+</TestCaseEntity>

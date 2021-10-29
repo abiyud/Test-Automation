@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>TC_Get list user</name>
+   <tag></tag>
+   <comment></comment>
+   <testCaseGuid>c01d6934-13db-455d-8c7d-22c102b01b91</testCaseGuid>
+   <variable>
+      <defaultValue>'2'</defaultValue>
+      <description></description>
+      <id>04f9377a-6ebc-448d-99e3-b918de983163</id>
+      <masked>false</masked>
+      <name>page</name>
+   </variable>
+   <variable>
+      <defaultValue>[]</defaultValue>
+      <description></description>
+      <id>9a719bf0-0f41-4854-b7df-a8aa24800efb</id>
+      <masked>false</masked>
+      <name>variable</name>
+   </variable>
+</TestCaseEntity>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>TC_Get single user</name>
+   <tag></tag>
+   <comment></comment>
+   <testCaseGuid>9c60ce4c-24e4-4f10-86fa-300d28f3eca2</testCaseGuid>
+   <variable>
+      <defaultValue>2</defaultValue>
+      <description></description>
+      <id>37b25c2e-bfd5-4c2a-a9f6-6254a2678888</id>
+      <masked>false</masked>
+      <name>id</name>
+   </variable>
+</TestCaseEntity>

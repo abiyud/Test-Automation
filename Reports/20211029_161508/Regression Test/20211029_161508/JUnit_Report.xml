@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites name="Regression Test" time="16.267" tests="4" failures="0" errors="0">
+   <testsuite name="Regression Test" tests="4" failures="0" errors="0" time="16.267" skipped="0" timestamp="2021-10-29 16:15:16" hostname="abiyu - AbiyuD-TPL13Yoga" id="Test Suites/Regression Test">
+      <properties>
+         <property name="deviceName" value=""/>
+         <property name="devicePlatform" value=""/>
+         <property name="logFolder" value="D:\\Test-Automation\\Reports\\20211029_161508\\Regression Test\\20211029_161508"/>
+         <property name="logFiles" value="D:\\Test-Automation\\Reports\\20211029_161508\\Regression Test\\20211029_161508\\execution0.log"/>
+         <property name="attachments" value=""/>
+         <property name="hostName" value="abiyu - AbiyuD-TPL13Yoga"/>
+         <property name="hostAddress" value="192.168.247.224"/>
+         <property name="os" value="Windows 10 64bit"/>
+         <property name="katalonVersion" value="8.1.0.208"/>
+      </properties>
+      <testcase name="Test Cases/TC_Get list user" time="5.877" classname="Test Cases/TC_Get list user" status="PASSED">
+         <system-out><![CDATA[2021-10-29 16:15:18 - [TEST_CASE][PASSED] - Test Cases/TC_Get list user: Test Cases/TC_Get list user
+
+2021-10-29 16:15:18 - [TEST_STEP][PASSED] - responseObject = sendRequest(findTestObject("List User", ["page":page])): Send request successfully
+
+2021-10-29 16:15:23 - [MESSAGE][INFO] - HAR: D:\Test-Automation\Reports\20211029_161508\Regression Test\20211029_161508\requests\main\0.har
+
+2021-10-29 16:15:23 - [MESSAGE][PASSED] - Send request successfully
+
+2021-10-29 16:15:23 - [TEST_STEP][PASSED] - listUser = getElementPropertyValue(responseObject, "data.id"): null
+
+2021-10-29 16:15:23 - [TEST_STEP][PASSED] - perPage = getElementPropertyValue(responseObject, "per_page"): null
+
+2021-10-29 16:15:23 - [TEST_STEP][PASSED] - verifyEqual(perPage, listUser.size()): Actual object '6' and expected object '6' are equal
+
+2021-10-29 16:15:23 - [MESSAGE][PASSED] - Actual object '6' and expected object '6' are equal
+
+2021-10-29 16:15:23 - [TEST_STEP][PASSED] - verifyElementPropertyValue(responseObject, "page", page): Verify element property value successfully
+
+2021-10-29 16:15:23 - [MESSAGE][PASSED] - Verify element property value successfully]]></system-out>
+         <system-err><![CDATA[]]></system-err>
+      </testcase>
+      <testcase name="Test Cases/TC_Get single user" time="2.238" classname="Test Cases/TC_Get single user" status="PASSED">
+         <system-out><![CDATA[2021-10-29 16:15:23 - [TEST_CASE][PASSED] - Test Cases/TC_Get single user: Test Cases/TC_Get single user
+
+2021-10-29 16:15:25 - [TEST_STEP][PASSED] - responseObject = sendRequest(findTestObject("Single User", ["id":id])): Send request successfully
+
+2021-10-29 16:15:25 - [MESSAGE][INFO] - HAR: D:\Test-Automation\Reports\20211029_161508\Regression Test\20211029_161508\requests\main\1.har
+
+2021-10-29 16:15:25 - [MESSAGE][PASSED] - Send request successfully
+
+2021-10-29 16:15:25 - [TEST_STEP][PASSED] - user = getElementPropertyValue(responseObject, "data.id"): null
+
+2021-10-29 16:15:26 - [TEST_STEP][PASSED] - userEmail = getElementPropertyValue(responseObject, "data.email"): null
+
+2021-10-29 16:15:26 - [TEST_STEP][PASSED] - glblTemp = userEmail: null
+
+2021-10-29 16:15:26 - [TEST_STEP][PASSED] - verifyEqual(user, id, STOP_ON_FAILURE): Actual object '2' and expected object '2' are equal
+
+2021-10-29 16:15:26 - [MESSAGE][PASSED] - Actual object '2' and expected object '2' are equal]]></system-out>
+         <system-err><![CDATA[]]></system-err>
+      </testcase>
+      <testcase name="Test Cases/TC_Update user" time="2.037" classname="Test Cases/TC_Update user" status="PASSED">
+         <system-out><![CDATA[2021-10-29 16:15:26 - [TEST_CASE][PASSED] - Test Cases/TC_Update user: Test Cases/TC_Update user
+
+2021-10-29 16:15:27 - [TEST_STEP][PASSED] - responseObject = sendRequest(findTestObject("Update User", ["name":name, "job":job, "id":userId])): Send request successfully
+
+2021-10-29 16:15:27 - [MESSAGE][INFO] - HAR: D:\Test-Automation\Reports\20211029_161508\Regression Test\20211029_161508\requests\main\2.har
+
+2021-10-29 16:15:27 - [MESSAGE][PASSED] - Send request successfully
+
+2021-10-29 16:15:27 - [TEST_STEP][PASSED] - timeUpdtResponse = getElementPropertyValue(responseObject, "updatedAt"): null
+
+2021-10-29 16:15:28 - [TEST_STEP][PASSED] - verifyElementPropertyValue(responseObject, "name", name): Verify element property value successfully
+
+2021-10-29 16:15:28 - [MESSAGE][PASSED] - Verify element property value successfully
+
+2021-10-29 16:15:28 - [TEST_STEP][PASSED] - verifyElementPropertyValue(responseObject, "job", job): Verify element property value successfully
+
+2021-10-29 16:15:28 - [MESSAGE][PASSED] - Verify element property value successfully
+
+2021-10-29 16:15:28 - [TEST_STEP][PASSED] - verifyNotEqual(timeUpdtResponse, null): Actual object '2021-10-29T09:15:27.780Z' and expected object 'null' are not equal
+
+2021-10-29 16:15:28 - [MESSAGE][PASSED] - Actual object '2021-10-29T09:15:27.780Z' and expected object 'null' are not equal]]></system-out>
+         <system-err><![CDATA[]]></system-err>
+      </testcase>
+      <testcase name="Test Cases/TC_Register" time="2.336" classname="Test Cases/TC_Register" status="PASSED">
+         <system-out><![CDATA[2021-10-29 16:15:28 - [TEST_CASE][PASSED] - Test Cases/TC_Register: Test Cases/TC_Register
+
+2021-10-29 16:15:28 - [TEST_STEP][PASSED] - responseObject = sendRequest(findTestObject("Register", ["email":glblTemp, "password":password])): Send request successfully
+
+2021-10-29 16:15:29 - [MESSAGE][INFO] - HAR: D:\Test-Automation\Reports\20211029_161508\Regression Test\20211029_161508\requests\main\3.har
+
+2021-10-29 16:15:29 - [MESSAGE][PASSED] - Send request successfully
+
+2021-10-29 16:15:29 - [TEST_STEP][PASSED] - idUser = getElementPropertyValue(responseObject, "id"): null
+
+2021-10-29 16:15:29 - [TEST_STEP][PASSED] - token = getElementPropertyValue(responseObject, "token"): null
+
+2021-10-29 16:15:29 - [TEST_STEP][PASSED] - responseGetUser = sendRequest(findTestObject("Single User", ["id":idUser])): Send request successfully
+
+2021-10-29 16:15:30 - [MESSAGE][INFO] - HAR: D:\Test-Automation\Reports\20211029_161508\Regression Test\20211029_161508\requests\main\4.har
+
+2021-10-29 16:15:30 - [MESSAGE][PASSED] - Send request successfully
+
+2021-10-29 16:15:30 - [TEST_STEP][PASSED] - verifyElementPropertyValue(responseGetUser, "data.id", idUser): Verify element property value successfully
+
+2021-10-29 16:15:30 - [MESSAGE][PASSED] - Verify element property value successfully
+
+2021-10-29 16:15:30 - [TEST_STEP][PASSED] - verifyElementPropertyValue(responseGetUser, "data.email", glblTemp): Verify element property value successfully
+
+2021-10-29 16:15:30 - [MESSAGE][PASSED] - Verify element property value successfully
+
+2021-10-29 16:15:30 - [TEST_STEP][PASSED] - verifyNotEqual(token, null): Actual object 'QpwL5tke4Pnpja7X2' and expected object 'null' are not equal
+
+2021-10-29 16:15:30 - [MESSAGE][PASSED] - Actual object 'QpwL5tke4Pnpja7X2' and expected object 'null' are not equal]]></system-out>
+         <system-err><![CDATA[]]></system-err>
+      </testcase>
+      <system-out><![CDATA[2021-10-29 16:15:16 - [TEST_SUITE][PASSED] - Regression Test: Test Cases/TC_Register]]></system-out>
+      <system-err><![CDATA[]]></system-err>
+   </testsuite>
+</testsuites>

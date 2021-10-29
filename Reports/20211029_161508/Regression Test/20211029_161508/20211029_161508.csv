@@ -1,0 +1,32 @@
+Suite/Test/Step Name,Browser,Description,Tag,Start time,End time,Duration,Status
+Regression Test,,,,2021-10-29 16:15:16,2021-10-29 16:15:30,13.813s,PASSED
+,,,,,,,
+Test Cases/TC_Get list user,,,,2021-10-29 16:15:18,2021-10-29 16:15:23,5.877s,PASSED
+"responseObject = sendRequest(findTestObject(""List User"", [""page"":page]))",,,,2021-10-29 16:15:18,2021-10-29 16:15:23,4.647s,PASSED
+"listUser = getElementPropertyValue(responseObject, ""data.id"")",,,,2021-10-29 16:15:23,2021-10-29 16:15:23,0.191s,PASSED
+"perPage = getElementPropertyValue(responseObject, ""per_page"")",,,,2021-10-29 16:15:23,2021-10-29 16:15:23,0.063s,PASSED
+"verifyEqual(perPage, listUser.size())",,,,2021-10-29 16:15:23,2021-10-29 16:15:23,0.078s,PASSED
+"verifyElementPropertyValue(responseObject, ""page"", page)",,,,2021-10-29 16:15:23,2021-10-29 16:15:23,0.092s,PASSED
+,,,,,,,
+Test Cases/TC_Get single user,,,,2021-10-29 16:15:23,2021-10-29 16:15:26,2.238s,PASSED
+"responseObject = sendRequest(findTestObject(""Single User"", [""id"":id]))",,,,2021-10-29 16:15:25,2021-10-29 16:15:25,0.676s,PASSED
+"user = getElementPropertyValue(responseObject, ""data.id"")",,,,2021-10-29 16:15:25,2021-10-29 16:15:26,0.096s,PASSED
+"userEmail = getElementPropertyValue(responseObject, ""data.email"")",,,,2021-10-29 16:15:26,2021-10-29 16:15:26,0.115s,PASSED
+glblTemp = userEmail,,,,2021-10-29 16:15:26,2021-10-29 16:15:26,0.005s,PASSED
+"verifyEqual(user, id, STOP_ON_FAILURE)",,,,2021-10-29 16:15:26,2021-10-29 16:15:26,0.039s,PASSED
+,,,,,,,
+Test Cases/TC_Update user,,,,2021-10-29 16:15:26,2021-10-29 16:15:28,2.037s,PASSED
+"responseObject = sendRequest(findTestObject(""Update User"", [""name"":name, ""job"":job, ""id"":userId]))",,,,2021-10-29 16:15:27,2021-10-29 16:15:27,0.889s,PASSED
+"timeUpdtResponse = getElementPropertyValue(responseObject, ""updatedAt"")",,,,2021-10-29 16:15:27,2021-10-29 16:15:28,0.103s,PASSED
+"verifyElementPropertyValue(responseObject, ""name"", name)",,,,2021-10-29 16:15:28,2021-10-29 16:15:28,0.109s,PASSED
+"verifyElementPropertyValue(responseObject, ""job"", job)",,,,2021-10-29 16:15:28,2021-10-29 16:15:28,0.100s,PASSED
+"verifyNotEqual(timeUpdtResponse, null)",,,,2021-10-29 16:15:28,2021-10-29 16:15:28,0.023s,PASSED
+,,,,,,,
+Test Cases/TC_Register,,,,2021-10-29 16:15:28,2021-10-29 16:15:30,2.336s,PASSED
+"responseObject = sendRequest(findTestObject(""Register"", [""email"":glblTemp, ""password"":password]))",,,,2021-10-29 16:15:28,2021-10-29 16:15:29,0.876s,PASSED
+"idUser = getElementPropertyValue(responseObject, ""id"")",,,,2021-10-29 16:15:29,2021-10-29 16:15:29,0.086s,PASSED
+"token = getElementPropertyValue(responseObject, ""token"")",,,,2021-10-29 16:15:29,2021-10-29 16:15:29,0.077s,PASSED
+"responseGetUser = sendRequest(findTestObject(""Single User"", [""id"":idUser]))",,,,2021-10-29 16:15:29,2021-10-29 16:15:30,0.702s,PASSED
+"verifyElementPropertyValue(responseGetUser, ""data.id"", idUser)",,,,2021-10-29 16:15:30,2021-10-29 16:15:30,0.059s,PASSED
+"verifyElementPropertyValue(responseGetUser, ""data.email"", glblTemp)",,,,2021-10-29 16:15:30,2021-10-29 16:15:30,0.055s,PASSED
+"verifyNotEqual(token, null)",,,,2021-10-29 16:15:30,2021-10-29 16:15:30,0.007s,PASSED
